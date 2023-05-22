@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+
+:root{
+	/*Colors*/
+	--primary-color: #cc0202;
+	--secondary-color: #ef4444;
+	--pri-text-color: #111827;
+	--sec-text-color: #4b5563;
+	--background-color:#f9fafb;
+	--container-color:#f3f4f6;
+	--border-color: #e5e7eb;
+	--pri-text-color-alt:#f9fafb;
+	--sec-text-color-alt:#9ca3af;
+	--background-color-alt:#111827;
+	--container-color-alt:#1f2937;
+
+	/*Font family*/
+	--main-fontfamily:'Montserrat', sans-serif;
+    --unique-fontfamily:'Seaweed Script', cursive;
+
+	/*Font weight*/
+	--regular-weight:400;
+	--bold-weight: 700;
+	--bolder-weight:900;
+
+	/*Font size*/
+	--big-font: 4rem;
+	--heading-font: 3.5rem;
+	--sub-heading-font:2.5rem;
+	--normal-font:1rem;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	color: var(--sec-text-color);
+	font-family: var(--main-fontfamily);
+	background-color: var(--background-color);
+}
+h1{
+	font-size: var(--big-font);
+	font-weight:var(--bolder-weight) ;
+	line-height: 1;
+	color: #fff;
+}
+h2{
+	font-size: var(--heading-font);
+	font-weight: var(--bolder-weight);
+	color: var(--secondary-color);
+	text-align: center;
+	padding: 10% 0 1% 0;
+}
+h3{
+	font-size: var(--sub-heading-font);
+	font-weight: var(--bold-weight);
+	color: var(--pri-text-color);
+}
+h6{
+	font-size: var(--normal-font);
+	color: #fff;
+}
+p{
+	font-size: var(--normal-font);
+	font-weight: var(--regular-weight);
+	color: var(--sec-text-color);
+	line-height: 2;
+}
+span{
+	color: var(--primary-color);
+}
+
+.social-icon{
+    font-size: 30px;
+    margin: 2% 1%;
+	padding: 2% 2%;
+    color: var(--pri-text-color);
+}
+.social-icon:hover{
+    color: var(--secondary-color);
+   
+}
+/*Dark Light*/
+body.dark-theme{
+	--pri-text-color: #f9fafb;
+	--sec-text-color: #9ca3af;
+	--background-color:#111827;
+	--container-color:#1f2937;
+	--border-color: #1f2937;
+	
+}
+/*Title Section*/
+header{
+	text-align: center;
+}
+.container-fluid{
+	position: relative;
+	padding: 18% 15% 10% 15%;
+	
+}
+canvas{
+	position: absolute;
+}
+.title-intro{
+	text-align: center;
+	
+}
+.rocket{
+	padding-top: 20%;
+}
+.rocket-btn{
+	color: #fff;
+	font-size: 40px;
+	animation: jet 1s ease-out infinite alternate ;
+}
+.rocket-btn:hover{
+	color: var(--primary-color);
+	
+}
+@keyframes jet{
+	100%{
+		transform:translateY(-25px)
+	}
+}
+
+/* Navbar */
+.change-theme{
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+}
+.change-theme:hover{
+	color: var(--primary-color);
+}
+.navbar-brand{
+	font-family: var(--unique-fontfamily);
+	font-size: 2rem;	
+}
+.nav-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 1.1rem;
+}
+
+.resume-button{
+	margin-top: 2%;
+	border-radius: 20px;
+	width: 200px;
+}
+/*About Section*/
+#about{	
+	position: relative;
+	background-color: var(--background-color);
+}
+.about-container{
+	padding: 3% 15%;
+	
+}
+.title-img{
+	width: 100%;
+}
+.skill-head{
+	text-align: center;
+	padding: 3% 0;
+}
+.skill-icon{
+	color: var(--pri-text-color);
+	padding-top: 15%;
+	padding-left: 10%;
+	font-size: 45px;
+	margin-bottom: 0;
+}
+.dj-img{
+	width: 90px;
+	height: 90px;
+	padding-top: 1%;
+}
+.skill-name{
+	padding-left: 10%;
+}
+.skill-container{
+	background-color: var(--container-color);
+	border: 2px solid var(--border-color);
+}
+
+/*Project Section*/
+.projects{
+	background-color: var(--container-color);
+	border: 2px solid var(--border-color);
+}
+.works{
+	text-align: center;
+}
+.pro-img{
+	width: 150%;
+	border-radius: 15px;
+}
+.screenshot{
+	padding-right: 20%;
+}
+.carousel-item{
+padding: 10% 15%;
+}
+.carousel-control-prev,
+.carousel-control-next{
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 50%;
+	top: calc(50% - 25px);
+}
+.carousel-control-prev{
+	left: 5%;
+}
+.carousel-control-next{
+	right: 5%;
+}
+.project-icon{
+	font-size: var(--normal-font);
+	color: var(--secondary-color);
+	padding: 1.5;
+}
+.alink{
+    margin: 2%;
+	color: var(--secondary-color);
+	font-size: 1rem;
+	
+}
+/*Contact Section*/
+.contact-container{
+	padding: 3% 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+#contact {
+	text-align: center;
+}
+form{
+	background-color: var(--container-color-alt);
+	display: flex;
+	flex-direction: column;
+	padding: 4vw 4vw;
+	width: 90%;
+	max-width: 600px;
+	border-radius: 10px;
+}
+form input, form textarea{
+	border: 0;
+	margin: 10px 0;
+	padding: 20px;
+	outline: none;
+	background: #f3f4f6;
+	font-size: 16px;
+	
+}
+form button{
+	padding: 15px;
+	background: var(--secondary-color);
+	color: #f9fafb;
+	font-size: 18px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	width: 150px;
+	margin: 20px auto 0;
+	border-radius: 30px;
+}
+/*Footer Section*/
+#footer{
+    text-align: center;
+    padding: 1% 15%;
+	background-color: var(--container-color);
+	border: 2px solid var(--border-color);
+}
+/*Small devices*/
+@media screen and (max-width:425px){
+	h1{
+		font-size: 2.5rem;
+		font-weight:var(--bolder-weight) ;
+		line-height: 1;
+		color: #fff;
+	}
+	h2{
+		font-size: 2.5rem;
+		margin: 15% 0 2% 0 ;
+		
+	}
+	h3{
+		font-size: 2rem;
+		margin: 20% 0 ;
+		
+	}
+	p{
+		font-size: 15px;
+		line-height: 2;
+	}
+	/*Title Section*/
+	.title-intro{
+		margin: 50% 0 30% 0;
+		text-align: center;
+	}
+	.rocket{
+		padding-top: 40%;
+	}
+	/*About Section*/
+	.about-container h3,
+	#contact h3{
+		margin: 8% 0;
+	}
+	.skill-name{
+		font-size: 12px;
+	}
+    /*Project Section*/
+	.project-container{
+		padding: 3% 3%;
+	}
+	.pro-img{
+		width: 150%;
+		
+	}
+	/*Contact Section*/
+	form{
+		padding: 10vw 4vw;
+	}
+    
+	/*Footer Section*/
+    #footer{
+        padding: 10% 15%;
+     	
+}
+
+}
+/*Medium devices*/
+@media screen and (min-width:768px){
+	h3{
+		margin: 5% 0 ;
+	}
+	/*Title Section*/
+	.title-intro{
+		margin: 0 0 30% 0;
+		
+	}
+	 /*Project Section*/
+	.pro-img{
+		width: 100%;
+	}
+    /*Contact Section*/
+	form{
+		padding: 5vw 4vw;
+	}
+}
+
+/*Large devices*/
+@media screen and (min-width:1024px){
+	h3{
+		margin: 5% 0 ;
+	}
+	
+	/*Title Section*/
+	.title-intro{
+		margin: 0;
+	}
+	 /*Project Section*/
+	.pro-img{
+		width: 150%;
+	}
+	/*Contact Section*/
+	#contact h3{
+		margin: 0;
+	}
+	form{
+		padding: 4vw 4vw; 
+	}
+}
