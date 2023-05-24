@@ -170,6 +170,13 @@ canvas{
 	text-align: center;
 	padding: 3% 0;
 }
+.cdnlogo{
+	height: 50%;
+	width: 60%;
+	padding-top: 15%;
+	padding-left: 10%;
+	margin-bottom: 0;
+}
 .skill-icon{
 	color: var(--pri-text-color);
 	padding-top: 15%;
