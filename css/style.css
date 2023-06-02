@@ -288,6 +288,26 @@ form button{
 	background-color: var(--container-color);
 	border: 2px solid var(--border-color);
 }
+/*Scroll up button-start*/
+.scrollup{
+	position: fixed;
+	right: 1rem;
+	bottom: -20%;
+	background-color: var(--primary-color);
+	opacity: .8;
+	padding: 0 .3rem;
+	border-radius: .4rem;
+	z-index: 10;
+	transition: .4s;
+}
+.scrollup__icon{
+	font-size: 2.5rem;
+	color: #fff;
+}
+.show-scroll{
+	bottom: 5rem;
+}
+/*End*/
 /*Small devices*/
 @media screen and (max-width:600px){
 	h1{
