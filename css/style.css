@@ -112,7 +112,7 @@ canvas{
 	
 }
 .rocket{
-	padding-top: 20%;
+	padding-top: 15%;
 }
 .rocket-btn{
 	color: #fff;
@@ -150,6 +150,12 @@ canvas{
 }
 
 .resume-button{
+	margin-top: 2%;
+	border-radius: 20px;
+	width: 200px;
+}
+.play-button{
+	font-size: var(--normal-font);
 	margin-top: 2%;
 	border-radius: 20px;
 	width: 200px;
