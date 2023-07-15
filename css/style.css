@@ -112,7 +112,7 @@ canvas{
 	
 }
 .rocket{
-	padding-top: 15%;
+	padding-top: 20%;
 }
 .rocket-btn{
 	color: #fff;
@@ -154,12 +154,7 @@ canvas{
 	border-radius: 20px;
 	width: 200px;
 }
-.play-button{
-	font-size: var(--normal-font);
-	margin-top: 2%;
-	border-radius: 20px;
-	width: 200px;
-}
+
 /*About Section*/
 #about{	
 	position: relative;
