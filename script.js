@@ -110,19 +110,3 @@ function scrollUp(){
     if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
-/* Play button*/ 
-let song = document.getElementById("song");
-let clkicon = document.getElementById("clkicon");
-
-function playPause(){
-    if (clkicon.classList.contains("fa-circle-pause")){
-        song.pause();
-        clkicon.classList.remove("fa-circle-pause");
-        clkicon.classList.add("fa-circle-play");
-    }
-    else{
-        song.play();
-        clkicon.classList.add("fa-circle-pause");
-        clkicon.classList.remove("fa-circle-play");
-    }
-}
