@@ -55,7 +55,7 @@ h2{
 	font-weight: var(--bolder-weight);
 	color: var(--secondary-color);
 	text-align: center;
-	padding: 8% 0 1% 0;
+	padding: 10% 0 1% 0;
 }
 h3{
 	font-size: var(--sub-heading-font);
