@@ -213,19 +213,19 @@ canvas{
     box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75);
 }
 .scroll-item:nth-child(1){
-    background: url('../img/wordpress-practice.local_\ \(1\).png');
+    background: url('../img/ec.jpg');
     background-size: cover;
     background-position: top;
     transition: all 10s ease;
 }
 .scroll-item:nth-child(2){
-    background: url('../img/one-more-rep.local_\ \(2\).png');
+    background: url('../img/gym.jpg');
     background-size: cover;
     background-position: top;
     transition: all 10s ease;
 }
 .scroll-item:nth-child(3){
-    background: url('../img/web3.png');
+    background: url('../img/travel.jpg');
     background-size: cover;
     background-position: top;
     transition: all 10s ease;
