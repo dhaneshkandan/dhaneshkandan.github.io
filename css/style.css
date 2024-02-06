@@ -1,32 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 
 :root{
 	/*Colors*/
-	--primary-color: #cc0202;
-	--secondary-color: #ef4444;
-	--pri-text-color: #111827;
-	--sec-text-color: #4b5563;
-	--background-color:#f9fafb;
-	--container-color:#f3f4f6;
-	--border-color: #e5e7eb;
-	--pri-text-color-alt:#f9fafb;
-	--sec-text-color-alt:#9ca3af;
-	--background-color-alt:#111827;
-	--container-color-alt:#1f2937;
+	--primary-color: #05060F;
+	--secondary-color:#5627FF;
+	--text-color: #686868;
+	--background-color: #f6f7fb;
 
 	/*Font family*/
-	--main-fontfamily:'Montserrat', sans-serif;
     --unique-fontfamily:'Seaweed Script', cursive;
-
+    --main-fontfamily:'Poppins', sans-serif;
 	/*Font weight*/
 	--regular-weight:400;
 	--bold-weight: 700;
 	--bolder-weight:900;
 
 	/*Font size*/
-	--big-font: 4rem;
-	--heading-font: 3.5rem;
+	--big-font: 3.2rem;
+	--heading-font: 3rem;
 	--sub-heading-font:2.5rem;
 	--normal-font:1rem;
 }
@@ -40,137 +33,204 @@ html{
 	scroll-behavior: smooth;
 }
 body{
-	color: var(--sec-text-color);
+	color: var(--text-color);
 	font-family: var(--main-fontfamily);
-	background-color: var(--background-color);
+	background-color: #fff;
 }
 h1{
+	font-family: var(--main-fontfamily);
 	font-size: var(--big-font);
 	font-weight:var(--bolder-weight) ;
-	line-height: 1;
-	color: #fff;
+	line-height: 1.2;
+	color: var(--primary-color);
 }
 h2{
+	font-family: var(--main-fontfamily);
 	font-size: var(--heading-font);
 	font-weight: var(--bolder-weight);
-	color: var(--secondary-color);
+	color: var(--primary-color);
 	text-align: center;
-	padding: 10% 0 1% 0;
+	padding: 3% 0;
 }
 h3{
 	font-size: var(--sub-heading-font);
 	font-weight: var(--bold-weight);
-	color: var(--pri-text-color);
+	color: var(--primary-color);
 }
 h4{
-	color: #fff;
+	font-weight: var(--bold-weight);
+}
+h5{
+	color: var(--primary-color);
 	font-weight: var(--bold-weight);
 }
 h6{
 	font-size: var(--normal-font);
-	color: #fff;
 }
+a {
+    text-decoration: none;
+  }
 p{
 	font-size: var(--normal-font);
 	font-weight: var(--regular-weight);
-	color: var(--sec-text-color);
+	color: var(--text-color);
 	line-height: 2;
 }
 span{
-	color: var(--primary-color);
+	color: #6b44e0;
 }
-
 .social-icon{
     font-size: 30px;
     margin: 2% 1%;
 	padding: 2% 2%;
-    color: var(--pri-text-color);
+    color: var(--primary-color);
 }
 .social-icon:hover{
-    color: var(--secondary-color);
+    color: #784cfb;
 }
 .pre-icon{
 	font-size: 20px;
 	padding-left: 15px;
     color: #fff;
 }
-/*Dark Light*/
-body.dark-theme{
-	--pri-text-color: #f9fafb;
-	--sec-text-color: #9ca3af;
-	--background-color:#111827;
-	--container-color:#1f2937;
-	--border-color: #1f2937;
-	
-}
-/*Title Section*/
-header{
+
+.section-headings{
 	text-align: center;
+	margin-bottom: 1.5rem;
 }
-.container-fluid{
+.headings{
 	position: relative;
-	padding: 18% 15% 10% 15%;
-	
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
 }
-canvas{
+.headings:before{
+	content: attr(data-headings);
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #6b44e0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.headings:after{
+	content: "";
 	position: absolute;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #6b44e0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.title-intro{
+
+/*Scroll Down*/
+.mouse{
 	text-align: center;
-	
+	margin-top: 50px;
+	padding-top: 50px;
+	cursor: pointer;
 }
-.rocket{
-	padding-top: 25%;
-}
-.rocket-btn{
-	color: #fff;
-	font-size: 40px;
+.mouse-icon{
 	animation: jet 1s ease-out infinite alternate ;
-}
-.rocket-btn:hover{
-	color: var(--primary-color);
-	
 }
 @keyframes jet{
 	100%{
 		transform:translateY(-25px)
 	}
 }
-
-/* Navbar */
-.change-theme{
-	color: #fff;
-	font-size: 30px;
-	cursor: pointer;
+.mouse-mess{
+	color: #6b48eb;
+	padding-top: 10px;
+	font-weight: 500;
+	
 }
-.change-theme:hover{
-	color: var(--primary-color);
+/* Start Title Section*/
+#title{
+	background-color: #fff;
+}
+header{
+	text-align: center;
+}
+
+/* Start Navbar*/
+.navbar{
+	background: #F9FAFB; 
 }
 .navbar-brand{
 	font-family: var(--unique-fontfamily);
 	font-size: 2rem;	
+	font-weight: var(--bolder-weight);
+	color:var(--primary-color);
+}
+
+.navbar-brand:hover{
+	color: var(--primary-color);
 }
 .nav-item{
-    padding: 0 18px;
+    padding: 0 15px;
 }
 .nav-link{
     font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--primary-color);
 }
-
-.resume-button{
-	margin-top: 2%;
-	border-radius: 20px;
-	width: 200px;
+.nav-link:hover{
+	color: #6b44e0;
 }
+.navbar-nav .nav-link.active{
+	color: #6b44e0;
+}
+.navbar-toggler{
+	background-color: #F9FAFB;
+}
+.navbar-toggler-icon{
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(5, 6, 15, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* End Navbar*/
 
-/*About Section*/
+/*Start Title-page*/
+.home-container{
+	padding: 110px 7% 0 7%;
+	height: 95vh;
+}
+.text-container{
+	padding: 70px 0;
+}
+.welcome{
+	color: var(--primary-color);
+}
+.resume-btn{
+	cursor: pointer;
+	color: #ffff;
+	font-size: 1.2rem;
+	font-weight: 600;
+	background-color: #784cfb;
+	border: 1px solid #784cfb;
+	border-radius: 10px;
+	padding: 12px 30px;
+	margin: 12px 0;
+}
+.resume-btn:hover{
+	background-color: #6b48eb
+}
+.hero-img{
+	width: 550px;
+}
+/*End Title-page*/
+
+/* End Title Section*/
+
+/*Start About Section*/
 #about{	
-	position: relative;
-	background-color: var(--background-color);
+	background-color: #F6F6F7 ;
 }
 .about-container{
-	padding: 3% 15%;
-	
+	padding: 3% 10%;
 }
 .title-img{
 	width: 100%;
@@ -197,123 +257,188 @@ canvas{
 	padding-left: 10%;
 }
 .skill-container{
-	background-color: var(--container-color);
-	border: 2px solid var(--border-color);
+	padding: 10px 0 5px 10px;
+	background-color: #ffff;
+	border-radius: 20px;
+	border: 2px solid #ffff;
 }
+/*End About Section*/
 
-/*Project Section*/
-/*Image scroll*/
-.wp-head{
+/*Start Service Section*/
+.service-container{
+	padding: 3% 0;
+}
+.service-box{
+	position: relative;
+	width: 100%;
+	max-width: 390px;
+	min-height: 520px;
+	background-color: #F6F7FB;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
+	padding: 3rem 2rem;
+	overflow: hidden;
+	transition: 0.3s;
+	border-radius: 5px;
 }
-.scroll-item{
-    position: relative;
-    height: 600px;
-    overflow: hidden;
-    box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75);
-}
-.scroll-item:nth-child(1){
-    background: url('../img/ec.jpg');
-    background-size: cover;
-    background-position: top;
-    transition: all 10s ease;
-}
-.scroll-item:nth-child(2){
-    background: url('../img/gym.jpg');
-    background-size: cover;
-    background-position: top;
-    transition: all 10s ease;
-}
-.scroll-item:nth-child(3){
-    background: url('../img/travel.jpg');
-    background-size: cover;
-    background-position: top;
-    transition: all 10s ease;
-}
-.scroll-item img{
-    width: 100%;
-    display: block;
-}
-.scroll-list{
-	padding:  3% ;
-	background-color: var(--container-color);
-	border-radius: 10px;
-	margin-bottom: 3%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: flex-start;
-    gap: 3rem;
-    margin: 2rem 0;
-}
-.scroll-item:hover{
-    background-position: bottom;
-}
-.portfolio_icon{
+.service-box::before{
+	content: attr(data-card);
     position: absolute;
-    bottom: -100%;
-    background-color: rgba(252, 66, 66, 0.85);
+    top: -15px;
+    right: -15px;
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #6b48eb;
+    opacity: 0.040;
+}
+.service-box::after{
+	content: "";
+    position: absolute;
     width: 100%;
-    padding: 0.8rem;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: bottom 0.3s ease;
-}
-.scroll-item:hover .portfolio_icon{
+    height: 0px;
     bottom: 0;
+    left: 0;
+    background-color: #784cfb;
+    transition: 0.3s;
 }
-@media screen and (max-width: 992px){
-    .scroll-list{
-        grid-template-columns: repeat(2, 1fr);
-    }
+.service-box:hover{
+	border-bottom: 8px solid #784cfb;
+	transform: translateY(-15px);
 }
-
-@media screen and (max-width: 576px){
-    .scroll-list{
-        grid-template-columns: repeat(1, 1fr);
-    }
+.service-content{
+	padding-top: 40px;
 }
-.projects{
-	background-color: var(--container-color);
-	border: 2px solid var(--border-color);
+.service-content h4{
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: #05060F;
 }
-.works{
-	text-align: center;
+.service-content p{
+	font-size: 1.15rem;
+    margin: 1.8rem 0;
 }
-.pro-img{
-	width: 150%;
-	border-radius: 15px;
+.service-icon{
+	width: 80px;
+	margin-bottom: 1.7rem;
 }
-.screenshot{
-	padding-right: 20%;
+.service-btn{
+	padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+    background-color: #784cfb;
+    color: #ffff;
+	border: 1px solid #784cfb;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: 0.3s;
 }
-.carousel-item{
-padding: 10% 15%;
-}
-.carousel-control-prev,
-.carousel-control-next{
-	width: 50px;
-	height: 50px;
-	background-color: black;
-	border-radius: 50%;
-	top: calc(50% - 25px);
-}
-.carousel-control-prev{
-	left: 5%;
-}
-.carousel-control-next{
-	right: 5%;
-}
-/*Freelancer section*/
-.sayhi-container{
-	padding: 0 25% ;
-	text-align: center;
-}
-.wp-icon{
-	width: 60px;
+.service-btn:hover{
+	background-color: #6b44e0;
 }
 
-/*Contact Section*/
+/*End Service Section*/
+
+/*Start Experience Section*/
+#experience{
+	padding-bottom: 100px;
+}
+.accordion{
+	--bs-accordion-color: var(--primary-color);
+	--bs-accordion-active-color:var(--primary-color);
+	--bs-accordion-bg: #F6F7FB;
+	--bs-accordion-active-bg:#F6F7FB;
+	--bs-accordion-btn-focus-box-shadow: none;
+	--bs-accordion-btn-focus-border-color: unset;
+}
+.accordion-button:not(.collapsed){
+	box-shadow: none;
+}
+.accordion-item{
+	padding: 0 20px;
+}
+.accordion-body p{
+	color: var(--primary-color);
+}
+.accordion-body span{
+	color: var(--primary-color);
+	font-weight: bold;
+}
+.ex-img{
+	width: 80px; 
+}
+.ex-content{
+	padding-left: 25px;
+}
+.ex-content p{
+	line-height: 0.5;
+}
+/*End Experience Section*/
+
+/*Start Project Section*/
+#portfolio{
+	background-color: #F6F6F7;
+}
+/* Center the project cards horizontally */
+#project-container{
+	padding: 0 10%;
+}
+.items-centern{
+	display: flex;
+	justify-content: center;
+}
+/* Center the filter buttons horizontally */
+.center-buttons {
+	display: flex;
+    justify-content: center;
+}
+/* Add your custom styles here */
+.card{
+	width:20rem;
+cursor: pointer;
+background-color: #fff;
+border-radius: 10px;
+overflow: hidden;
+transition: all 0.5s ease-in-out;
+padding: 26px 20px;
+margin-bottom: 50px;
+}
+.card:hover{
+transform: translateY(-10px);
+box-shadow: 0 0 35px 4px #c1c1c1;
+
+}
+.card-img-top{
+height: 180px;
+border-radius: 10px;
+}
+.card-body{
+margin-top: 10px;
+}
+.card-lang{
+	color: #05060F;
+padding-top: 2%;
+font-size: 0.9rem;
+}
+.card-icons{
+	color: #05060F;
+	font-size: 25px;
+	padding-right: 15px;
+}
+.card-icons:hover{
+	color: #6b44e0;
+}
+.btn-group .btn {
+	background-color:#784cfb; /* Set your desired background color */
+	color: #fff; /* Set the text color */
+}
+
+.btn-group .btn.active {
+	background-color: #6b44e0 ; /* Set the background color for the active state */
+}
+/*End Project Section*/
+
+/*Start Contact Section*/
 #contact {
 	text-align: center;
 }
@@ -321,47 +446,71 @@ padding: 10% 15%;
 	padding: 3% 10%;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--container-color);
+	background-color:#F6F6F7 ;
 	border-radius: 10px;
 	margin-top: 3%;
-	margin-bottom: 8%;
-}
-.name-logo{
-	width: 55px;
-}
-.name{
-	font-size: var(--heading-font);
-	color: var(--pri-text-color);
+	margin-bottom: 2%;
+	overflow: hidden;
 }
 .mail-btn{
 	padding: 15px;
-	background: var(--secondary-color);
+	background: #784cfb;
 	color: #f9fafb;
 	font-size: 18px;
-	border: 2px solid var(--secondary-color);
+	border: 2px solid #784cfb;
 	outline: none;
 	cursor: pointer;
-	width: 200px;
-	margin: 20px auto 0;
 	border-radius: 30px;
 }
 .mail-btn:hover{
 	background: #f9fafb;
-	color: var(--secondary-color);
+	color: #6b44e0;
 }
-/*Footer Section*/
+/*End Conatct Section*/
+
+/*Start Footer Section*/
 #footer{
-    text-align: center;
-    padding: 1% 15%;
-	background-color: var(--container-color);
-	border: 2px solid var(--border-color);
+	text-align: center;
+	padding: 2% 15% 1% 15%;
+	color: #919295;
+	background-color: #05060F;
+	border: 2px solid #05060F;
 }
-/*Scroll up button-start*/
+#footer h3{
+	color: #ffff;
+	font-size: 2rem;
+}
+#footer p{
+	color: #919295;
+	font-size: 1rem;
+	font-weight: 200;
+}
+#footer a{
+	color: #919295;
+	text-decoration: none;
+}
+#footer a:hover{
+	color:#fff; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+#footer .social-icon{
+	font-size: 25px;
+	color: #919295;
+	margin: 0;
+}
+#footer .social-icon:hover{
+	color: #fff;
+}
+/*End Footer Section*/
+
+/*Scroll Up*/
 .scrollup{
 	position: fixed;
 	right: 1rem;
-	bottom: -20%;
-	background-color: var(--primary-color);
+	bottom: -15%;
+	background-color:#784cfb;
 	opacity: .8;
 	padding: 0 .3rem;
 	border-radius: .4rem;
@@ -369,119 +518,254 @@ padding: 10% 15%;
 	transition: .4s;
 }
 .scrollup__icon{
-	font-size: 2.5rem;
+	font-size: 2.3rem;
 	color: #fff;
 }
 .show-scroll{
-	bottom: 5rem;
+	bottom: 3rem;
 }
 /*End*/
 
-/*Small devices*/
+/*Responsive Designs*/
+
+/*Start Small devices*/
 @media screen and (max-width:600px){
 	h1{
-		font-size: 2.5rem;
-		font-weight:var(--bolder-weight) ;
-		line-height: 1;
-		color: #fff;
+		font-size: 2.7rem;
 	}
 	h2{
-		font-size: 2.5rem;
-		margin: 15% 0 2% 0 ;
+		font-size: 1.5rem;
+		
 	}
 	h3{
-		font-size: 2rem;
-		margin: 18% 0 ;
-		
+		font-size: 1.9rem;
+	}
+	h4{
+		font-size: 0.2rem;
+		font-weight: normal;
 	}
 	p{
 		font-size: 15px;
-		line-height: 1.8;
 	}
-	/*Title Section*/
-	.title-intro{
-		margin: 50% 0 30% 0;
+	.headings{
+		font-size: 2.3rem;
+	}
+	.headings:before{
+		font-size: 1rem;
+	}
+	.headings:after{
+		width: 70px;
+	}
+	/*Scroll Down*/
+    .mouse{
+	    margin-top: 20px;
+	    padding-top: 25px;
+	}
+
+	/*Start Title Section*/
+	.home-container{
 		text-align: center;
+		padding: 90px 0;
+		height: 135vh;
 	}
-	.rocket{
-		padding-top: 40%;
+	.text-container{
+		padding: 2% 0;
 	}
-	/*About Section*/
-	.about-container h3,
-	#contact h3{
-		margin: 8% 0;
+	.welcome{
+		padding: 0 2%;
+	}
+	.resume-btn{
+		font-size: 1rem;
+		margin: 8px 0;
+	}
+	.mouse{
+		display: none;
+	}
+	.hero-img{
+		width: 345px;
+	}
+	
+	/*End Title Section*/
+
+	/*Start About Section*/
+	#about{
+		padding: 50px 0;
+	}
+	.skill-head{
+		padding-top: 25px;
 	}
 	.skill-name{
 		font-size: 12px;
 	}
-    /*Project Section*/
-	.works{
-		margin: 0 15%;
+	/*End About Section*/
+
+	/*Start Service Section*/
+	#service{
+		padding: 50px 0;
 	}
-	.project-container{
-		padding: 3% 3%;
+	.items-centern{
+		display: flex;
+		justify-content: center;
 	}
-	.pro-img{
-		width: 150%;
+	.service-box{
+		margin-top: 7%;
+		max-width: 300px;
 	}
-	/*Freelancer section*/
-    .sayhi-container{
-	    padding: 0 8% ;
-    }
-    .wp-icon{
-	width: 50px;
-    }
+	.service-content{
+		padding-top: 30px;
+	}
+	.service-content h4{
+		font-size: 1.5rem;
+	}
+	.service-content p{
+		font-size: 1rem;
+		margin: 1.5rem 0;
+	}
+	.service-icon{
+		width: 80px;
+	}
+	/*End Service Section*/
+
+	/*Start Experience Section*/
+	#experience{
+		padding-bottom: 50px;
+		
+	}
+	.ex-content{
+		padding-top: 10px;
+		padding-left: 0;
+	}
+	.ex-content p{
+		line-height: 1;
+	}
+	.accordion-body p{
+		padding-top: 10px;
+	}
+	/*End Experience Section*/
+
+	/*Start Projects Section*/
+	#portfolio{
+		padding: 50px 0;
+	}
+	.card{
+		width:20rem;
+	}
+	/*End Projects Section*/
+
+	/*Start Contact Section*/
 	/*Contact Section*/
-	.name{
-		font-size: 2.5rem;
+	.contact-container{
+		margin: 10% 0;
+		padding: 10% 8%;
+	}
+	.contact-container h4{
+		font-size: 1.1rem;
 	}
 	.mail-btn{
 		font-size: 15px;
-		width: 190px;
+		margin-bottom: 3%;
 	}
-	/*Footer Section*/
-    #footer{
-        padding: 10% 15%;
-}
+	/*End Contact Section*/
 
-}
-/*Medium devices*/
-@media screen and (min-width:768px){
-	h3{
-		margin: 5% 0 ;
+	/*Start Footer Section*/
+	#footer{
+		padding: 5% 5%;
 	}
-	/*Title Section*/
-	.title-intro{
-		margin: 0 0 30% 0;
-		
+	#footer h3{
+		color: #ffff;
+		font-size: 1.5rem;
+		padding-top: 8px;
 	}
-	 /*Project Section*/
-	.pro-img{
-		width: 100%;
-	}
-	/*Freelancer section*/
-    .sayhi-container{
-	    padding: 0 15% ;
-    }
-    /*Contact Section*/
 	
+	#footer p{
+		padding-top: 10px;
+		font-size: 1rem;
+	}
+	#footer .social-icon{
+		font-size: 23px;
+		padding-bottom: 10px;
+	}
+	/*End Footer Section*/
+
 }
 
-/*Large devices*/
+/*End Small device*/
+
+/*Start Medium Device*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+	/*Start Title Section*/
+	.hero-img{
+		width: 300px;
+	}
+	/*End Title Section*/
+
+	/*Start About Section*/
+	/*End About Section*/
+
+	/*Start Service Section*/
+	.service-box{
+		margin-bottom: 8%;
+	}
+	/*End Service Section*/
+
+	/*Start Experience Section*/
+	.ex-img{
+		width: 100px; 
+	}
+	.ex-content p{
+		line-height: 1;
+	}   
+	.accordion-body p{
+		padding-top: 10px;
+	} 
+	/*End Experience Section*/
+
+	/*Start Projects Section*/
+	/*End Projects Section*/
+
+	/*Start Contact Section*/
+	/*End Contact Section*/
+
+	/*Start Footer Section*/
+	#footer{
+		padding: 5% 0;
+	}
+	/*End Footer Section*/
+
+}
+/*End Medium Device*/
+
+/*Start Large Device*/
 @media screen and (min-width:1024px){
-	h3{
-		margin: 3% 0 ;
+	/*Start Title Section*/
+	
+	/*End Title Section*/
+
+	/*Start About Section*/
+	/*End About Section*/
+
+	/*Start Service Section*/
+	/*End Service Section*/
+
+	/*Start Experience Section*/
+	.ex-content{
+		padding-left: 70px;
 	}
-	/*Title Section*/
-	.title-intro{
-		margin: 0;
-	}
-	 /*Project Section*/
+	/*End Experience Section*/
+
+	/*Start Projects Section*/
 	.pro-img{
 		width: 150%;
 	}
-	/*Contact Section*/
-	#contact h3{
-		margin: 0;
-	}
+	/*End Projects Section*/
+
+	/*Start Contact Section*/
+	
+	/*End Contact Section*/
+
+	/*Start Footer Section*/
+	/*End Footer Section*/
+
 }
+/*End Large Device*/
