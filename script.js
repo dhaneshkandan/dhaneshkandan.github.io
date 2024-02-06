@@ -1,108 +1,22 @@
-const canvas = document.getElementById("stars");
-const ctx = canvas.getContext("2d");
+// Filter projects based on the selected category
+function filterProjects(category) {
+    $('.filter-item').hide(); // Hide all projects
 
-var screen, starArr;
-
-var params ={ speed:5, count: 400, life: 5};
-
-setup()
-update()
-
-window.onresize =function(){
-    setup();
-}
-function Star(){
-    this.x = Math.random()* canvas.width;
-    this.y =Math.random()* canvas.height;
-    this.z = Math.random()* canvas.width;
-
-
-    this.move =function(){
-        this.z -= params.speed;
-
-        if(this.z <= 0){
-            this.z = canvas.width;
-        }
-    };
-
-    this.show = function(){
-        let x,y,radius,opacity;
-
-        radius = canvas.width / this.z;
-        screen.c = [window.innerWidth*0.5,window.innerHeight*0.5]
-        x = (this.x - screen.c[0]) * radius;
-        x = x + screen.c[0];
-        y = (this.y - screen.c[0]) * radius;
-        y = y+ screen.c[1];
-
-        opacity = radius>params.life ? (2-radius/params.life) * 1.5:1;
-
-        ctx.beginPath();
-        ctx.fillStyle = "rgba(255,255,255,"+opacity+")";
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.fill();
-    };
-}
-
-
-function setup(){
-    screen = {
-        w: window.innerWidth,
-        h: window.innerHeight,
-        c: [window.innerWidth * 0.5, window.innerHeight * 0.5],
-
-    };
-    window.cancelAnimationFrame(update);
-    canvas.width =screen.w;
-    canvas.height = screen.h;
-
-    starArr = [];
-
-    for(var i = 0; i< params.count; i++){
-        starArr[i] = new Star();
+    if (category === 'all') {
+        $('.filter-item').show(); // Show all projects if 'All' is selected
+    } else {
+        $('.filter-item.' + category).show(); // Show projects with the selected category
     }
 }
 
-function update(){
-    ctx.fillStyle = "black";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+// Handle click events on filter buttons
+$('.btn-group .btn').on('click', function () {
+    $('.btn-group .btn').removeClass('active'); // Remove 'active' class from all buttons
+    $(this).addClass('active'); // Add 'active' class to the clicked button
 
-    starArr.forEach(function (s){
-        s.show();
-        s.move();
-    });
-
-    window.requestAnimationFrame(update);
-}
-/*==================== DARK LIGHT THEME ====================*/ 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+    var category = $(this).data('filter'); // Get the category from data-filter attribute
+    filterProjects(category); // Call the filterProjects function with the selected category
+});
 /*==================== SHOW SCROLL Up ====================*/ 
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
