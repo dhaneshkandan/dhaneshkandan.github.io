@@ -221,6 +221,29 @@ header{
 .hero-img{
 	width: 550px;
 }
+.follow-container{
+	padding-top: 25px;
+}
+.check{
+	color: #05060F;
+	font-weight: 500;
+}
+.hori-line{
+	
+	width: 100px;
+}
+.line{
+	width: 80px;
+}
+
+.follow-icon{
+	padding: 10px;
+	margin-right: 8px;
+	font-size: 20px;
+	color: #05060F;
+	background-color: #F6F6F7;
+	border-radius: 100%;
+}
 /*End Title-page*/
 
 /* End Title Section*/
