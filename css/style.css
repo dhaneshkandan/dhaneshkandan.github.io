@@ -610,7 +610,14 @@ font-size: 0.9rem;
 	.hero-img{
 		width: 300px;
 	}
-	
+	.follow-container{
+		padding-top: 0;
+		text-align: center;
+	}
+	.hori-line{
+		visibility: hidden;
+		height: 0;
+	}
 	/*End Title Section*/
 
 	/*Start About Section*/
@@ -723,6 +730,14 @@ font-size: 0.9rem;
 	/*Start Title Section*/
 	.hero-img{
 		width: 300px;
+	}
+	.follow-container{
+		padding-top: 0;
+		
+	}
+	.hori-line{
+		visibility: hidden;
+		height: 0;
 	}
 	/*End Title Section*/
 
