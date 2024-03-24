@@ -396,6 +396,11 @@ header{
 .ex-content p{
 	line-height: 0.5;
 }
+.muslimgifts-img{
+	width: 100px;
+	height: auto;
+	border-radius: 10px;
+}
 /*End Experience Section*/
 
 /*Start Project Section*/
